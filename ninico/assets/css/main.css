@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Ninico - Minimal eCommerce HTML Template
+    Theme Name: Cftcbrandtech - Minimal eCommerce HTML Template
     Author: Theme Pure
     Support: basictheme@gmail.com
     Description: Template Name  – HTML5 Template
@@ -1099,7 +1099,7 @@ input[type=color] {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 20px;
+  left: 16px;
 }
 .header-search-bar input {
   border: none;
@@ -2433,9 +2433,22 @@ input[type=color] {
     font-size: 16px;
   }
 }
+.tp-slide-item__title::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% + 40px);
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+  border-radius: 6px;
+}
 .tp-slide-item__title {
+  padding: 16px 16px 16px 16px;
   color: var(--tp-text-body);
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -2461,6 +2474,15 @@ input[type=color] {
   bottom: 10px;
   z-index: -1;
   animation: section-animation 3s infinite;
+}
+/* %lik oranlar için responve ayarları */
+@media (max-width: 767px) { 
+  .tp-slide-item__title i img {
+    left: -2px;
+    bottom: 6px;
+    width: 18px;
+    height: auto;
+  }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .tp-slide-item__thumb img {
