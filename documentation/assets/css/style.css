@@ -5,7 +5,7 @@
     --secondary-font: "Hind", sans-serif;
     --primary-color: #ff2c54;
     --theme-color: #161978;
-    --action-color: #678E61;
+    --action-color: #D51243;
     --typo-dark: #333333;
     --typo-body: #666666;
     --typo-mid: #8A94A6;
@@ -30,12 +30,7 @@ html {
     padding: 0;
     overflow-x: hidden
 }
-a i {
-	font-size: 14px;
-}
-.ml-20{
-    margin-left: 20px;
-}
+
 @media (max-width:1199px) {
     html {
         font-size: 9px
@@ -574,7 +569,7 @@ p {
 	z-index: 99;
 }
 .themepure-doc-nav a:hover {
-	color: #678E61;
+	color: #D51243;
 }
 .themepure-doc-nav .icon {
 	top: 0;
@@ -582,7 +577,7 @@ p {
 	line-height: 48px;
 	font-size: 18px;
 	position: absolute;
-	color: #678E61;
+	color: #D51243;
 	transform: rotate(0deg);
 	cursor: pointer;
 	padding: 0 10px;
@@ -642,7 +637,7 @@ p {
 }
 .docs-progress-bar {
     position: absolute;
-    background: #DEEAFF;
+    background: #EEDDE1;
     bottom: 0;
     left: 0;
     top: 0;
@@ -719,6 +714,7 @@ textarea {
     margin-top: 0rem;
     -webkit-transition: color .5s;
     transition: color .5s;
+    letter-spacing: 1px;
 }
 
 .main h4 {
@@ -756,7 +752,7 @@ img {
 }
 
 .page-footer a {
-    color: #678E61
+    color: #D51243
 }
 
 .page-footer a:hover {
@@ -944,7 +940,7 @@ ul.item-details li {
     text-align: center;
     padding: 0 25px;
     color: #ffffff;
-    background: #678E61;
+    background: #D51243;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -1000,7 +996,7 @@ ul.item-details li {
 	border-radius: 50%;
 	font-weight: 500;
 	font-size: 12px;
-	background-color: #678E61;
+	background-color: #D51243;
 	text-align: center;
 	line-height: 23px;
 	top: -4px;
@@ -1034,7 +1030,7 @@ ul.item-details li {
 }
 .code {
 	list-style: none;
-	border-left: 4px solid #678E61;
+	border-left: 4px solid #D51243;
 	padding: 10px 0;
 	background: #F6F9FB;
 }
@@ -1109,8 +1105,8 @@ ul.item-details li {
 }
 .social-footer a:hover {
 	color: #fff;
-	border-color:#678E61;
-    background-color: #678E61;
+	border-color:#D51243;
+    background-color: #D51243;
 }
 .themepure-doc-nav a img {
 	width: 19px;
@@ -1172,7 +1168,7 @@ ul.item-details li {
 	width: 6px;
 	height: 6px;
 	border-radius: 50%;
-	background: #678E61;
+	background: #D51243;
 	position: absolute;
 	left: 0;
 	top: 8px;

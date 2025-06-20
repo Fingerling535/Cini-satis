@@ -16,7 +16,7 @@
 	<meta property="og:url" content="index.html" />		
 	<!-- Page Title
     ======================================== -->
-	<title>Shofy - Grocery eCommerce Vue Nuxt 3 Template</title>
+	<title>Ninico - Minimal eCommerce HTML5 Template</title>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
@@ -43,7 +43,7 @@
 				<div class="col-lg-3 col-md-4 col-sm-6 col-6">
 					<div class="logo">
 						<a href="#" class="nav-brand">
-							<img src="assets/images/logo.svg" alt="logo" width="155" height="36">
+							<img src="assets/images/logo.png" alt="logo">
 						</a>
 					</div>
 				</div>
@@ -55,7 +55,7 @@
 							</div>
 						</form>
 						<div class="nav-list">
-							<a class="support-link d-none d-md-inline-block" href="https://help.themepure.net/login" target="_blank">request support</a>
+							<a class="support-link d-none d-md-inline-block" href="https://themepure.net/help/support/login" target="_blank">request support</a>
 							<a class="e-btn d-none d-md-inline-block" href="https://themeforest.net/user/theme_pure/portfolio" target="_blank">Visit Themes</a>
 							<a href="#" class="toggle-navbar"><i class="icon_menu"></i></a>
 						</div>
@@ -71,7 +71,7 @@
 				<div class="col-xl-3">
 					<aside class="sidebar-navigation sticky-top doc-sidebar">
 						<h3>Doc Navigation</h3>
-						<!-- <nav class="nav"> -->
+						<!-- <nav class="nav">						 -->
 							<ul class="themepure-doc-nav  nav-sidebar doc-nav">
 								<li class="nav-item">
 									<a class="nav-link" href="#getting_started"><img src="assets/images/icon/start-button.png"> Getting Started </a>
@@ -86,56 +86,43 @@
 								</li>
 	
 								<li class="nav-item">
-									<a class="nav-link" href="#react_installation">
-										<img src="assets/images/icon/vue.png"> Vue Installation</a>
+									<a class="nav-link" href="#template"><img src="assets/images/icon/hierarchical-structure.png"> Template Structures</a>
+									<span class="icon">
+										<i class="icon_plus"></i>
+										<i class="icon_minus-06"></i>
+									</span>
+									<ul class="submenu dropdown_nav">
+										<li class="nav-item"><a class="nav-link" href="#html">HTML Structure</a></li>
+										<li class="nav-item"><a class="nav-link" href="#css">CSS Files and Structure</a></li>
+										<li class="nav-item">
+											<a class="nav-link" href="#javascript">Javascript Files</a>
+										</li>
+									</ul>
 								</li>
 	
 								<li class="nav-item">
-									<a class="nav-link" href="#basic_site_setting"><img src="assets/images/icon/writer.png"> Basic Site Setting</a>
+									<a class="nav-link" href="#change_content"><img src="assets/images/icon/writer.png"> Change Contents</a>
 									<span class="icon">
 										<i class="icon_plus"></i>
 										<i class="icon_minus-06"></i>
 									</span>
 									<ul class="submenu dropdown_nav">
 										<li class="sub-nav nav-item ">
-											<a class="nav-link" href="#change_site_title_and_favicon">Change Site Title and Favicon</a>
+											<a class="nav-link" href="#change_img">Changing Images</a>
 										</li>
 										<li class="nav-item">
 											<a class="nav-link" href="#change_logo">Changing Brand Logo</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#customize_menu">Customize Menu</a>
+											<a class="nav-link" href="#change_color">Changing Colors</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" href="#customize_footer">Customize Footer</a>
+											<a class="nav-link" href="#change_mail">Changing Email Contact Form</a>
 										</li>
 									</ul>
 								</li>
-
 								<li class="nav-item">
-									<a class="nav-link" href="#pages"><img src="assets/images/icon/landing-page.png"> Pages </a>
-									<span class="icon">
-										<i class="icon_plus"></i>
-										<i class="icon_minus-06"></i>
-									</span>
-									<ul class="submenu dropdown_nav">
-										<li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-										<li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
-										<li class="nav-item"><a class="nav-link" href="#404">404</a></li>
-									</ul>
-								</li>
-
-								<li class="nav-item">
-									<a class="nav-link" href="#template_options"><img src="assets/images/icon/settings.png"> Template Options </a>
-									<span class="icon">
-										<i class="icon_plus"></i>
-										<i class="icon_minus-06"></i>
-									</span>
-									<ul class="submenu dropdown_nav">
-										<li class="nav-item"><a class="nav-link" href="#option_header">Header</a></li>
-										<li class="nav-item"><a class="nav-link" href="#option_color">Color</a></li>
-										<li class="nav-item"><a class="nav-link" href="#option_typo">Typography</a></li>
-									</ul>
+								<a class="nav-link" href="#source"><img src="assets/images/icon/love-letter.png">Sources and Credits</a>
 								</li>
 								<li class="nav-item">
 								<a class="nav-link" href="#support"><img src="assets/images/icon/headphone.png">Support</a>
@@ -152,10 +139,10 @@
 									<div class="steps-panel">
 										<ol class="ordered-list">
 											<li>
-												<strong>Item Name : </strong>Shofy - Grocery eCommerce Vue Nuxt 3 Template
+												<strong>Item Name : </strong>Ninico - Minimal eCommerce HTML Template
 											</li>
 											<li>
-												<strong>Created: </strong>18 November 2023
+												<strong>Created: </strong>21 September 2022
 											</li>
 											<li><strong>Item Version : </strong> v 1.0.0</li>
 											<li>
@@ -164,71 +151,39 @@
 											</li>
 											<li>
 												<strong>Support Ticket: </strong>
-												<a href="https://help.themepure.net/login" target="_blank">https://help.themepure.net/login</a>
+												<a href="https://themepure.net/help/support/login" target="_blank">https://themepure.net/help/support/login</a>
 											</li>
 										</ol>
 									</div>	
 									<figure>
-										<img class="max-100" src="assets/images/outstock.png" alt="">
+										<img class="max-100" src="assets/images/screenshot.jpg" alt="">
 									</figure>
 			
 									<section id="introduction">							
 										<h2>Introduction</h2>
-										<h4 class="title">Shofy - Grocery eCommerce Vue Nuxt 3 Template Documentation</h4>
-										<div class="top-support">For any support please don't hesitate to contact us at <a href="https://help.themepure.net/login"><b>Support Center</b></a>. We provide 13 hours real-time support for our customers.</div>
-										<p>We would like to thank you for choosing <b>Shofy</b>.</p>
+										<h4 class="title">Ninico - Minimal eCommerce HTML Template</h4>
+										<div class="top-support">For any support please don't hesitate to contact us at <a href="https://themepure.net/help/support/"><b>Support Center</b></a>. We provide 13 hours real-time support for our customers.</div>
+										<p>We would like to thank you for choosing Ninico - Minimal eCommerce HTML Template</p>
 									</section>
 									<!-- End of #getting_started -->
 									<section id="requirements">
 									<h3>Getting started</h3>
-									<p>Shofy – Multipurpose eCommerce vue nuxt 3 Template is a clean and modern vue nuxt 3 , Bootstrap eCommerce Template. An eCommerce vue nuxt 3 template is a powerful tool for creating a professional and visually appealing online store. With a well-designed template, you can quickly and easily build an eCommerce website that not only looks great but also functions seamlessly. These templates provide the basic structure and layout for your online store, including pages for product listings, shopping carts, checkout processes, and more. Whether you’re just starting out with your eCommerce business or looking to revamp your existing website, an eCommerce vue nuxt 3 template can be a valuable resource for creating a high-quality online store that meets your unique needs.</p>
-									<div class="requirements">
-										<h2>Requirements</h2>
-										<p>There are system requirements in order to install and setup Shofy template and its components properly. Make sure that you are installed <strong>node.js</strong> and <strong>Yarn</strong>.</p>
-
-										<h4>For nodejs go here <a target="_blank" href="https://nodejs.org/en/">Nodjs <i class="icon_link_alt"></i></a></h4>
-										<figure>
-											<img class="max-100" src="assets/images/nodejs.png" alt="">
-										</figure>
-
-										<h4>For yarn go here <a target="_blank" href="https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable">Yarn <i class="icon_link_alt"></i></a></h4>
-										<figure>
-											<img class="max-100" src="assets/images/yarn.png" alt="">
-										</figure>
-
-										<h4>Install Yarn</h4>
-										<figure>
-											<img class="max-100" src="assets/images/yearn-install.png" alt="">
-										</figure>
-									</div>
-
+									<p>Ninico Template is a clean and modern HTML5 , Bootstrap Research Template.We created this template to give you a smooth user experience as you manage your online shop. Since it is a minimalist theme, Ninico will give you a classy and simple site rather than a flashy one that doesn’t focus on what you’re selling. With these and more features, Ninico will make your website a world-beater.</p>
 
 									<h4>Template Features</h4>
 									<div class="steps-panel">
 										<ul class="ordered-list">
-											<li><b>Vue JS</b></li>
-											<li><b>Nuxt 3</b></li>
-											<li><b>Typescript</b></li>
-											<li><b>Pinia</b></li>
-											<li>Based on Bootstrap 5.x</li>
-											<li>VueJS without jQuery</li>
-											<li>Free Premium Quality Support</li>
-											<li>Logo Slider Integration</li>
-											<li>Sticky Header</li>
-											<li>Google Fonts</li>
-											<li>100% Responsive</li>
-											<li>Nice and Clean Design</li>
-											<li>Clean code</li>
-											<li>Customizable all components of each page</li>
-											<li>Integrated with FontAwesome </li>
-											<li>18+ Inner Pages</li>
-											<li>Blog Pages</li>
-											<li>Image background</li>
-											<li>Easy to customize</li>
-											<li>Flexible and multi-purpose</li>
-											<li>Valid / CSS3</li>
-											<li>24/7 Awesome support</li>
-											<li>Detailed documentation</li>
+											<li>HTML5 &amp; CSS3</li>
+											<li>Bootstrap v5.x</li>
+											<li>Font-awesome</li>
+											<li>jQuery</li>
+											<li>5 Awesome Homepage</li>
+											<li>Responsive Design</li>
+											<li>Pixel Perfect Design</li>
+											<li>Clean Code &amp; Unique Design</li>
+											<li>Easy to Customize</li>
+											<li>Isotop Filtering</li>
+											<li>Ajax Contact Form</li>
 										</ul>
 									</div>
 
@@ -236,14 +191,15 @@
 									<!-- End of #requirements -->
 									<section id="what_included">
 										<h3>What's Included</h3>
-										<p>After purchasing Shofy template  on themeforest.net with your Envato account, go to your Download page. You can choose to download Shofy template  package which contains the following files:</p>
+										<p>After purchasing NInico template  on themeforest.net with your Envato account, go to your
+											Download page. You can choose to download Ninico template  package which contains the following files:</p>
 										<figure>
 											<img class="max-100" src="assets/images/include/1.png" alt="">
 										</figure>
 										<h4>The contents of the template  package downloaded from ThemeForest</h4>	
 										<div class="steps-panel">
 											<ul class="ordered-list">
-												<li><strong>Shofy grocery</strong> - An Vue nuxt Template file.  this file you can edit and use for your business.</li>
+												<li><strong>Ninico</strong> - An HTML Template file.  this file you ca edit and use for your business.</li>
 												<li><strong>Documentation</strong> -  This folder contains what you are reading now :)</li>
 											</ul>
 										</div>
@@ -251,232 +207,190 @@
 									<!-- End of #what_included -->
 								</article>
 
-								<article id="react_installation" class="section-main doc-section">
+								<article id="template" class="section-main doc-section">
 									<section>
-										<h2>Shofy Installation</h2>
-										<p>Please follow the instructions how you can install Vue on your hosting:</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li><strong>For local host</strong> - 
-													<ol class="ordered-list">
-														<li>Open you command prompt</li>
-														<li>npm install or npm install --legacy-peer-deps</li>
-														<li>npm run dev (will start the dev server at <strong>http://loaclhost:3000</strong>)</li>
-													</ol>
-												</li>
-												
-											</ol>
-											<br>
-											<br>
-											<ol class="ordered-list">
-												<li><strong>To deploy a Next.js application on Vercel, you can follow these steps:</strong> - 
-													<ol class="ordered-list">
-														<li>Open you command prompt</li>
-														<li>Sign up for an account on Vercel if you don't have one already.</li>
-														<li>Connect your GitHub, GitLab, or Bitbucket repository where your Next.js application is hosted.</li>
-														<li>Import your repository on Vercel and select the Next.js project to be deployed.</li>
-														<li>Vercel will automatically detect your vue nuxt application and perform the necessary build and deployment steps.</li>
-														<li>Once the deployment is complete, you'll be able to access your application using the URL provided by Vercel.</li>
-													</ol>
-												</li>
-											</ol>
-											<br>
-										</div>
-									</section>
-									<!-- End of #installation -->
-									<!-- End of #using_ftp_uploader -->
-								</article>
+										<h2>Template Structures</h2>
 
-								<article id="basic_site_setting" class="section-main doc-section">
-									<section>
-										<h2>Basic Site Settings</h2>							
+										<h3>Articles</h3>
+										<ul class="list-unstyled article_list tag_list">
+											<li><a href="#html"><i class="icon_document_alt"></i>HTML Structure</a></li>
+											<li><a href="#css"><i class="icon_document_alt"></i>CSS Files and Structure</a></li>
+											<li><a href="#javascript"><i class="icon_document_alt"></i>JavaScript Files</a></li>
+										</ul>
 									</section>
-									<!-- End of #section-4 -->				
-									<section id="change_site_title_and_favicon">
-										<h3>Change Page Title and Favicon</h3>
-										<p>To change your Site title and Favicon open the Shofy in your editor and go to the location by following screenshot which are given bellow.</p>									
+									<!-- End of #installation -->
+									<section id="html">
+										<h3>HTML Structure</h3>
+										<p>This template is a fixed layout with four columns. The main contents are inside the 'body' tag divided into differt section (i.e. header, banner, services,... footer etc.). The general template structure is the same throughout the template. Here is the general structure.</p>	
 										<figure>
-											<img src="assets/images/page-title.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">You can change <b>page title</b> here</figcaption>
-										</figure>										
-										<figure>
-											<img src="assets/images/site-favicon.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">You can change <b>favicon</b> here</figcaption>
+											<img src="assets/images/html-structure-1.png" alt="3.1.1" class="doc-image">
+											<figcaption class="text-center">HTML Markup Structure</figcaption>
 										</figure>										
 									</section>
 									<!-- End of #installation -->
-									<section id="change_logo">
-										<h3>Change Logo</h3>
-										<p>To change logo and customize other header data do the following:</p>
+									<section id="css">
+										<h3>CSS Files and Structure</h3>
+										<p>We are using one customed CSS files (style.css) and several vendor css files. CSS file structure is as follows:</p>
 										<figure>
-											<img src="assets/images/site-logo.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">You can change <b>logo</b> here</figcaption>
+											<img src="assets/images/css-structure-1.png" alt="3.1.1" class="doc-image">
+											<figcaption class="text-center">CSS Files and Structure</figcaption>
 										</figure>	
 									</section>
 									<!-- End of #using_theme_uploader -->
 			
-									<section id="customize_menu">
-										<h3>Customize Menu</h3>
-										<p>To customize menu do the following:</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li>From the project folder go to <span class="direction_steps"><span class="direction_step">data </span>
-												<span class="direction_step">menu-data</span>
-												<span class="direction_step">Open the menu you want to use</span>
-											</span>
-										</li>
-												<li>Then customize the menu</li>
-											</ol>
-										</div>
+									<section id="javascript">
+										<h3>JavaScript Files</h3>
+										<p>There is a custom .js file named main.js and are several vendor js files as plugins. We are using jQuery(a javascript library) instead of vanilla javascript. Our file structure is a follows:</p>
 										<figure>
-											<img src="assets/images/nav-menus.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">Customize the menu</figcaption>
+											<img src="assets/images/js-structure-1.png" alt="3.1.1" class="doc-image">
+											<figcaption class="text-center">JavaScript Files</figcaption>
 										</figure>	
 									</section>
-
-									<section id="customize_footer">
-										<h3>Customize Footer</h3>
-										<p>To customize footer data do the following:</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li>From the project folder go to <span class="direction_steps">
-													<span class="direction_step">components</span>
-													<span class="direction_step">footer</span>
-												<span class="direction_step">footer-one</span>
-												<span class="direction_step">Open the menu you want to use</span></span></li>
-												<li>Then customize the footer data</li>
-											</ol>
-										</div>
-										<figure>
-											<img src="assets/images/site-footers.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">Customize the footer</figcaption>
-										</figure>	
-									</section>
-	
+									<!-- End of #using_ftp_uploader -->
 								</article>
 
-								<article id="pages" class="section-main doc-section">
-									<section id="blog">
-										<h3>Customize Blog data</h3>
-										<p>To customize blog data do the following:</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li>From the project folder go to <span class="direction_steps">
-													<span class="direction_step">data </span>
-													<span class="direction_step">blog-bata</span>
-												<span class="direction_step">Open the menu you want to use</span></span></li>
-												<li>Then customize the blog data</li>
-											</ol>
-										</div>
-										<figure>
-											<img src="assets/images/site-blog.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">Customize the blog</figcaption>
-										</figure>	
-									</section>
-									<section id="product">
-										<h3>Customize Product data</h3>
-										<p>To customize product data do the following:</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li>From the project folder go to <span class="direction_steps">
-													<span class="direction_step">data</span>
-													<span class="direction_step">product-data</span>
-												<span class="direction_step">Open the menu you want to use</span></span></li>
-												<li>Then customize the product data</li>
-											</ol>
-										</div>
-										<figure>
-											<img src="assets/images/site-product.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">Customize the products</figcaption>
-										</figure>	
-									</section>
-
-									<section id="404">
-										<h3>Error Handling</h3>
-										<p>To change 404 and other error you can change by following this screenshot here.</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li>From the project folder go to <span class="direction_steps">
-												<span class="direction_step">error.vue</span>
-												<span class="direction_step">Open the menu you want to use</span></span>
-											</li>
-												<li>Then customize the error page</li>
-											</ol>
-										</div>
-										<figure>
-											<img src="assets/images/404.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">Customize the error page</figcaption>
-										</figure>	
-									</section>
-									
-								</article>
-
-								<article id="template_options" class="section-main doc-section">
-									<section id="option_header">
-										<h3>Customize Header</h3>
-										<p>We gave you four header layout. you can modify the header markup there.</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li>From the project folder go to <span class="direction_steps">
-													<span class="direction_step">components </span>
-													<span class="direction_step">header</span>
-													<span class="direction_step">header-one</span>
-												<span class="direction_step">Open the menu you want to use</span></span>
-											</li>
-												<li>Then customize the header</li>
-											</ol>
-										</div>
-										<figure>
-											<img src="assets/images/site-header.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">Customize the header</figcaption>
-										</figure>	
-									</section>
-
-									<section id="option_color">
-										<h3>Colors</h3>
-										<p>To change color and setting you can change by following this screenshot here.</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li>From the project folder go to <span class="direction_steps">
-													<span class="direction_step">assets</span>
-													<span class="direction_step">scss</span>
-													<span class="direction_step">utils</span>
-													<span class="direction_step">_colors.scss</span>
-												<span class="direction_step">Open the menu you want to use</span></span></li>
-												<li>Then customize the color data</li>
-											</ol>
-										</div>
-										<figure>
-											<img src="assets/images/chnage-colors.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">Customize the color</figcaption>
-										</figure>	
-									</section>
-									<section id="option_typo">
-										<h3>Typography</h3>
-										<p>To change Typography and setting you can change by following this screenshot here.</p>
-										<div class="steps-panel">
-											<ol class="ordered-list">
-												<li>From the project folder go to <span class="direction_steps">
-													<span class="direction_step">assets</span>
-													<span class="direction_step">scss</span>
-													<span class="direction_step">_theme.scss</span>
-												<span class="direction_step">Open the menu you want to use</span></span></li>
-												<li>Then customize the Typography data</li>
-											</ol>
-										</div>
-										<figure>
-											<img src="assets/images/typo.png" alt="3.1.1" class="doc-image">
-											<figcaption class="text-center">Customize the Typography</figcaption>
-										</figure>	
-									</section>
-								</article>
-
-								<article id="support" class="section-main doc-section">
+								<article id="change_content" class="section-main doc-section">
 									<section>
+										<h2>Change Contents</h2>
+										<ul class="list-unstyled article_list tag_list">
+											<li><a href="#changingimages"><i class="icon_document_alt"></i>Changing
+													Images</a></li>
+											<li><a href="#branlogo"><i class="icon_document_alt"></i>Changing Brand Logo</a>
+											</li>
+											<li><a href="#emailchange"><i class="icon_document_alt"></i>Changing Email Settings of the Contact Form</a>
+											</li>
+										</ul>							
+									</section>
+									<!-- End of #section-4 -->				
+			
+									<section id="change_img">
+									<h3>Changing Images</h3>
+									<p>To change any images of the website</p>
+									<div class="steps-panel">
+										<ol class="ordered-list">
+											<li>Carefully collect the source name of the image (i.e. hero.jpg)
+											</li>
+											<li>Open the file called images.</li>
+											<li>Find the particular image file.</li>
+											<li>Replace the file with your image.</li>
+											<li>Make sure that the file name does not change.The file name should be
+												the same.</li>
+										</ol>
+									</div>
+									<p> <strong>Example:</strong> Suppose you want to change the following image
+										file:</p>
+									<figure>
+										<img src="assets/images/change-img.png" alt="4.1.1" class="doc-image">
+									</figure>
+									<h4>You have to do the following to change this image with your own image:</h4>
+									<div class="steps-panel">
+										<ol class="ordered-list">
+											<li>Open the file called images.</li>
+											<li>Find the particular image file called banner-img.jpg</li>
+											<li>Replace the file with your image</li>
+											<li>Make sure that the file name does not change.</li>
+										</ol>
+									</div>
+
+									<div class="alert media message_alert alert-danger fade show" role="alert">
+										<i class="icon_close_alt2"></i>
+										<div class="media-body">
+											<h5>Note</h5>
+											<p>Images seen in the live preview are only set for preview purposes. They are not included in the download files.</p>
+										</div>
+									</div>
+
+									</section>
+			
+									<section id="change_logo">
+									<h3>Changing Brand Logo</h3>
+			
+									<p>To change any images of the website</p>
+									<div class="steps-panel">
+										<ol class="ordered-list">
+											<li>Carefully collect the source name of the image (i.e.
+												banner-img.jpg)</li>
+											<li>Open the file called images.</li>
+											<li>Find the particular image file.</li>
+											<li>Replace the file with your image.</li>
+											<li>Make sure that the file name does not change.The file name
+												should be the same.</li>
+										</ol>
+									</div>
+
+									<p> <strong>Example:</strong> Suppose you want to change the following
+										image file for change your logo:</p>
+									<figure>
+										<img src="assets/images/brand-img.png" alt="4.1.1" class="doc-image">
+									</figure>
+
+											
+									</section>
+									<!-- End of #section-4 -->
+									<section id="change_color">
+										<h3>Changing Colors</h3>
+										<p>We have used <strong style="color: #f81f01;">scss</strong> for this project to write css. If
+											you are familiar with <strong style="color: #f81f01;">scss</strong> you should customize
+											only the <strong style="color: #f81f01;">.scss</strong> files. Please make sure you compile
+											the <strong style="color: #f81f01;">main.scss</strong> file after you have made changes in
+											any of the <strong style="color: #f81f01;">.scss</strong> files.</p>
+
+										<ul class="list-unstyled article_list tag_list rn-list">
+											<li><a href="#changedefaultcolor">Changing default template
+												colors</a></li>
+										</ul>
+										<h3>Changing default template colors</h3>
+										<div class="steps-panel">
+											<ol class="ordered-list">
+												<li>Open the <strong>variable.scss</strong> file from <strong>assets &gt; scss &gt;
+													defaults</strong> folder with a text-editor.</li>
+												<li>Change the right-side values of the variables to change any default colors of your
+													site.</li>
+												<li>Save your file.</li>
+											</ol>
+										</div>
+										<figure>
+											<img src="assets/images/chnage-colors.png" alt="4.1.1" class="doc-image">
+										</figure>
+									</section>
+									<section id="change_mail">
+										<h3>Changing Email Settings of the Contact Form</h3>
+										
+										<div class="steps-panel">
+											<ol class="ordered-list">
+												<li>Go to main folder</li>
+												<li>Open mail.php</li>
+												<li>Go to line number 15</li>
+												<li>Follow instructions in image below:</li>
+											</ol>
+										</div>
+
+										<figure>
+											<img src="assets/images/mail-id.png" alt="4.1.1" class="doc-image">
+										</figure>
+									</section>
+								</article>
+								<article id="change_content" class="section-main doc-section">
+									<section id="section-4-3">
+										<h3>Sources and Credits</h3>
+										
+										<ul class=" single_list">
+											<li><a target="_blank" href="https://fonts.google.com/">Google Fonts</a></li>
+											<li><a target="_blank" href="https://daneden.github.io/animate.css/">Animate.css</a></li>
+											<li><a target="_blank" href="https://jquery.com/">jQuery</a></li>
+											<li><a target="_blank" href="http://imakewebthings.com/waypoints/">Waypoints Js</a></li>
+											<li><a target="_blank" href="https://isotope.metafizzy.co/">Isotop</a></li>
+											<li><a target="_blank" href="https://github.com/bfintal/Counter-Up">Counter Up</a></li>
+										</ul>
+									</section>
+								</article>
+
+								<article id="change_content" class="section-main doc-section">
+								<section id="getting_started7">
 									<h3>Support</h3>
 										<p style="color:red;font-weight:bold;">If you face any issue please contact us at 
-											<a class="black-color" href="https://help.themepure.net/login">Support Ticket</a>. We provide 15 hours real-time support for our customers.</p>
-										<p>Thank you for purchasing our template.</p>
+											<a class="black-color" href="https://themepure.net/help/support/">Support Ticket</a>. We provide 15 hours real-time support for our customers.</p>
+										<p>Thank you for purchasing our theme.</p>
 										<p class="mt50"></p>
 									</section>
 								</article>	
@@ -502,7 +416,7 @@
 			<div class="row align-items-center">
 				<div class="col-md-8">
 					<div class="page-footer">
-						<p>© 2023 All Rights Reserved by <a href="https://themeforest.net/user/theme_pure/portfolio">theme_pure</a>.</p>
+						<p>© 2022 All Rights Reserved by <a href="https://themeforest.net/user/theme_pure/portfolio">theme_pure</a>.</p>
 					</div>
 				</div>
 				<div class="col-md-4">
