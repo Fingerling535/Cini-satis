@@ -230,7 +230,7 @@ strong,b {
 }
 
 .brand-logo {
-    display: block
+    display: block;
 }
 
 @media print {
