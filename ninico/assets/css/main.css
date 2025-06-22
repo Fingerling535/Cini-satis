@@ -1911,7 +1911,7 @@ input[type=color] {
   padding-right: 45px;
 }
 .tpsideinfo__search form input::placeholder {
-  color: var(--tp-border-3);
+  color: var(--tp-border-5);
 }
 .tpsideinfo__search button {
   position: absolute;
