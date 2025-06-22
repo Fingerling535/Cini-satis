@@ -2188,6 +2188,12 @@ input[type=color] {
   font-size: 18px;
   font-weight: 700;
 }
+.tpcart__total-price .shipping-price {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--tp-text-body);
+  text-decoration: line-through;
+}
 .tpcart__free-shipping {
   padding: 13px 30px;
   background-color: var(--tp-theme-5);
