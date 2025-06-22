@@ -2428,8 +2428,8 @@ input[type=color] {
   }
 }
 .tp-slide-item__sub-title {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 800;
   color: var(--tp-text-primary);
   display: block;
   margin-bottom: 5px;
@@ -2447,14 +2447,15 @@ input[type=color] {
   transform: translateY(-50%);
   width: calc(100% + 40px);
   height: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   z-index: -1;
   border-radius: 6px;
+  backdrop-filter: blur(10px);
 }
 .tp-slide-item__title {
   padding: 16px 16px 16px 16px;
   color: var(--tp-text-body);
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -2611,13 +2612,25 @@ input[type=color] {
   position: absolute;
   top: 8px;
   left: 8px;
-  width: 100%;
+  width: 376px;
   height: 100%;
   border-radius: 6px;
   z-index: -1;
-  background-color: rgba(255, 255, 255, 0.3);  
+  background-color: rgba(255, 255, 255, 0.5);  
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+  .tpslider-banner__content::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 324px;
+  height: 100%;
+  border-radius: 6px;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.5);  
+  }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tpslider-banner__content {
@@ -2631,7 +2644,7 @@ input[type=color] {
 }
 .tpslider-banner__sub-title {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--tp-text-primary);
 }
 .tpslider-banner__title {
