@@ -2612,24 +2612,20 @@ input[type=color] {
   position: absolute;
   top: 8px;
   left: 8px;
-  width: 376px;
+  width: 374px;
   height: 100%;
   border-radius: 6px;
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.5);  
 }
-
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .tpslider-banner__content::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 324px;
-  height: 100%;
-  border-radius: 6px;
-  z-index: -1;
-  background-color: rgba(255, 255, 255, 0.5);  
+  width: 374px; } 
+}
+@media only screen and (min-width: 1200px) and (max-width: 1920px) {
+  .tpslider-banner__content::before {
+  width: 323px; 
+  } 
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
