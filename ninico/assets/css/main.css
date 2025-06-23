@@ -4184,6 +4184,7 @@ input[type=color] {
   border: transparent;
   color: var(--tp-text-body);
   font-weight: 600;
+  z-index: 9999;
 }
 .tp-shop-selector .nice-select::after {
   right: 20px;
