@@ -1270,7 +1270,7 @@ input[type=color] {
   align-items: center;
   padding: 9px 25px;
   min-height: 50px;
-  min-width: 215px;
+  min-width: 240px;
   font-size: 16px;
   color: var(--tp-common-white);
   font-weight: 600;
@@ -1292,7 +1292,7 @@ input[type=color] {
 }
 .cat-menu__category .category-menu {
   background: var(--tp-common-white);
-  width: 100%;
+  width: max-content;
   border: 1px solid var(--tp-border-2);
   border-top: none;
   position: absolute;
@@ -1349,6 +1349,7 @@ input[type=color] {
 }
 .cat-menu__list li {
   list-style: none;
+  width: max-content;
 }
 .cat-menu__list li > a {
   display: flex;
@@ -1393,7 +1394,7 @@ input[type=color] {
 .cat-menu__list li.menu-item-has-children > a::after {
   content: "\f178";
   position: absolute;
-  right: 20px;
+  right: 5px;
   font-size: 14px;
   font-family: "Font Awesome 5 Pro";
   font-weight: 700;
@@ -1429,6 +1430,7 @@ input[type=color] {
   list-style: none;
   display: inline-block;
   margin-right: 40px;
+  left: 40px;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .main-menu ul > li {
@@ -1487,6 +1489,7 @@ input[type=color] {
   display: block;
   width: 100%;
   margin: 0;
+  left: 0
 }
 .main-menu ul > li .submenu li.has-dropdown > a::after {
   position: absolute;

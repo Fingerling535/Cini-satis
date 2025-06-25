@@ -144,27 +144,30 @@
 
 			range: true,
 
-			min: 0,
+			min: 250,
 
-			max: 1000,
+			max: 5000,
+			
+			step: 10,
 
-			values: [0, 500],
+			values: [250, 5000],
 
 			slide: function (event, ui) {
 
-				$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+				$("#amount").val( ui.values[0] + " TL - " + ui.values[1] +  " TL");
+				
 
 			}
 
 		});
 
-		$("#amount").val("$" + $("#slider-range").slider("values", 0) +
+		$("#amount").val(  $("#slider-range").slider("values", 0) + " TL - " +
 
-			" - $" + $("#slider-range").slider("values", 1));
+			+ $("#slider-range").slider("values", 1) + " TL" );
 
 		$('#filter-btn').on('click', function () {
 
-			$('.filter-widget').slideToggle(1000);
+			$('.filter-widget').slideToggle(5000);
 
 		});
 
