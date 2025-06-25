@@ -2450,10 +2450,9 @@ input[type=color] {
   transform: translateY(-50%);
   width: calc(100% + 40px);
   height: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 1);
   z-index: -1;
   border-radius: 6px;
-  backdrop-filter: blur(10px);
 }
 .tp-slide-item__title {
   padding: 16px 16px 16px 16px;
