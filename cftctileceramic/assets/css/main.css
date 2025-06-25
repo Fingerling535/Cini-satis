@@ -4189,7 +4189,7 @@ input[type=color] {
   border: transparent;
   color: var(--tp-text-body);
   font-weight: 600;
-  z-index: 9999;
+  z-index: 10;
 }
 .tp-shop-selector .nice-select::after {
   right: 20px;
