@@ -2445,9 +2445,8 @@ input[type=color] {
 .tp-slide-item__title::before {
   content: "";
   position: absolute;
-  left: -20px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 0px;
+  bottom: -5px;
   width: calc(100% + 40px);
   height: 100%;
   background: rgba(255, 255, 255, 1);
