@@ -1425,7 +1425,7 @@ input[type=color] {
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-right: 65px;
+  margin-right: 40px;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .main-menu ul > li {
@@ -1723,7 +1723,7 @@ input[type=color] {
   padding: 45px 0;
 }
 .mainmenu__main > .main-menu > nav > ul > li:nth-child(3) {
-  margin-right: 230px;
+  margin-right: 40px;
 }
 .mainmenu__logo {
   position: absolute;
