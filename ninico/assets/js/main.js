@@ -607,7 +607,25 @@
 		allowTouchMove: false,
 		disableOnInteraction: true,
 	});
-		
+	////////////////////////////////////////////////////
+	// 31. Language Js	
+	const languageLinks = document.querySelectorAll(".header-meta__lang-submenu a");
+	const currentFlag = document.getElementById("currentFlag");
+	const currentLanguage = document.getElementById("currentLanguage");
+
+	languageLinks.forEach(link => {
+  	link.addEventListener("click", function(event) {
+    event.preventDefault(); // Sayfa yenilenmesini engelle
+
+    const selectedLang = this.getAttribute("data-lang");
+    const selectedFlag = this.getAttribute("data-flag");
+    const selectedText = this.textContent;
+
+    // Seçilen dili ve bayrağı güncelle
+    currentFlag.src = selectedFlag;
+    currentLanguage.textContent = selectedText;
+  });
+});
 
 
 
