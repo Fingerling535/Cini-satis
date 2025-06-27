@@ -538,15 +538,18 @@
                </div>
                <div class="tpcart__checkout-btn">
                   <a class="tpcart-btn mb-10" href="cart.html">SEPETİ GÖR</a>
-                  <a class="tpcheck-btn" id="confirmOrderBtn" href="checkout.html">SİPARİŞİ ONAYLA</a>
+                    <!-- Sipariş onay formu -->
                   <form action="pay.php" method="POST" id="shopierForm">
                      <input type="hidden" name="name" value="Kaan">
                      <input type="hidden" name="surname" value="Demir">
                      <input type="hidden" name="email" value="kaan@example.com">
                      <input type="hidden" name="phone" value="05321234567">
-
+                     <!-- JS ile doldurulacak alanlar -->
                      <input type="hidden" name="product" id="productInput">
                      <input type="hidden" name="price" id="priceInput">
+                      <!-- Formu gönderen buton -->
+                     
+                     <button type="submit" class="tpcheck-btn" id="confirmOrderBtn">SİPARİŞİ ONAYLA</button>
                   </form>
                </div>
             </div>
@@ -2163,25 +2166,22 @@
       <script src="assets/js/jquery.knob.js"></script>
       <script src="assets/js/main.js"></script>
       <script>
-         document.getElementById("confirmOrderBtn").addEventListener("click", function () {
-         // Sepetteki ürünleri topla
-         const products = [
-            { name: "Lale Dekorlu Kase", price: 162.80 },
-            { name: "Lale Dekorlu Tabak", price: 138.00 }
-         ];
+         ddocument.getElementById("confirmOrderBtn").addEventListener("click", function (event) {
+            event.preventDefault(); // SAYFA DEĞİŞMESİN
 
-         // Ürün isimlerini virgülle ayır
-         const productList = products.map(p => p.name).join(', ');
+            // Sepetteki ürünleri topla
+            const products = [
+               { name: "Lale Dekorlu Kase", price: 162.80 },
+               { name: "Lale Dekorlu Tabak", price: 138.00 },
+            ];
 
-         // Fiyatları toplayarak toplam tutarı bul
-         const totalPrice = products.reduce((acc, p) => acc + p.price, 0).toFixed(2);
+            const productList = products.map(p => p.name).join(', ');
+            const totalPrice = products.reduce((acc, p) => acc + p.price, 0).toFixed(2);
 
-         // Gizli inputlara değerleri yaz
-         document.getElementById("productInput").value = productList;
-         document.getElementById("priceInput").value = totalPrice;
+            document.getElementById("productInput").value = productList;
+            document.getElementById("priceInput").value = totalPrice;
 
-         // Formu gönder
-         document.getElementById("shopierForm").submit();
+            document.getElementById("shopierForm").submit();
          });
       </script>
 

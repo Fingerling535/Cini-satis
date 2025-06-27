@@ -473,10 +473,12 @@ input[type=color] {
   color: var(--tp-common-white);
   border-radius: 30px;
   padding: 10px 30px;
-  text-align: center;
   line-height: 1.5;
   padding: 14px;
   font-weight: 600;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
 }
 .tpcart-btn:hover,
 .tpcheck-btn:hover {
