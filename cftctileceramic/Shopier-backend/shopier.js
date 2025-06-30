@@ -36,28 +36,7 @@ async function createOrder(data) {
 module.exports = { createOrder };
 
 
-fetch("http://localhost:4000/create-order", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    product_name: "El Yapımı Çini Tabağı",
-    buyer_name: "Kaan Yılmaz",
-    buyer_email: "kaan@example.com",
-    buyer_address: "İznik, Bursa",
-    buyer_phone: "05555555555",
-    amount: "299.90"
-  })
-})
-  .then(res => res.json())
-  .then(data => {
-    if (data.redirectUrl) {
-      window.location.href = data.redirectUrl;
-    } else {
-      console.error("redirectUrl dönmedi:", data);
-    }
-  });
+
 
 
 
