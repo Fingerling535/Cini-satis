@@ -750,7 +750,7 @@
 
       <script>
 document.getElementById("pay-now-btn").addEventListener("click", function () {
-  fetch("https://www.shopier.com/ShowProduct/api_pay4.php", {
+  fetch("https://shopier-api-nodejs.onrender.com/create-order", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
