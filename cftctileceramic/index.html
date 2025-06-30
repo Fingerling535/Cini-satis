@@ -2165,25 +2165,9 @@
       <script src="assets/js/meanmenu.js"></script>
       <script src="assets/js/jquery.knob.js"></script>
       <script src="assets/js/main.js"></script>
-      <script>
-         ddocument.getElementById("confirmOrderBtn").addEventListener("click", function (event) {
-            event.preventDefault(); // SAYFA DEĞİŞMESİN
-
-            // Sepetteki ürünleri topla
-            const products = [
-               { name: "Lale Dekorlu Kase", price: 162.80 },
-               { name: "Lale Dekorlu Tabak", price: 138.00 },
-            ];
-
-            const productList = products.map(p => p.name).join(', ');
-            const totalPrice = products.reduce((acc, p) => acc + p.price, 0).toFixed(2);
-
-            document.getElementById("productInput").value = productList;
-            document.getElementById("priceInput").value = totalPrice;
-
-            document.getElementById("shopierForm").submit();
-         });
-      </script>
+      <script src="Shopier-backend/index.js"></script>
+      <script src="Shopier-backend/shopier.js"></script>
+      <script src="Shopier-backend/webhook.js"></script>
 
    </body>
 </html>
