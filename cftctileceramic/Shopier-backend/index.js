@@ -17,9 +17,11 @@ app.post("/create-order", async (req, res) => {
 // Webhook dinleyici
 app.post("/webhook", webhook.handleWebhook);
 
-app.listen(4000, () => {
-  console.log("Server running at https://www.cftctileceramic.com/backend/create-order");
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+
 
 
 
