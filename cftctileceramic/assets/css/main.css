@@ -1719,7 +1719,7 @@ input[type=color] {
   left: 20px;
 }
 .mainmenu__main { 
-  margin-left: 20%;
+  margin-left: 5%;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -1734,9 +1734,10 @@ input[type=color] {
   margin-right: 0px;
 }
 .mainmenu__logo {
-  position: absolute;
-  left:25%;
-  top:95px; 
+  position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 24px;
   transform: translateY(-52%);
 }
 
