@@ -1431,8 +1431,8 @@ input[type=color] {
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-right: 40px;
-  left: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .main-menu ul > li {
@@ -1607,7 +1607,6 @@ input[type=color] {
   opacity: 1;
   z-index: 99;
 }
-
 .menu-contact {
   display: flex;
   justify-content: end;
@@ -1719,9 +1718,10 @@ input[type=color] {
   transform: translateY(-50%);
   left: 20px;
 }
-.mainmenu__main {
-  margin-left: 120px;
+.mainmenu__main { 
+  margin-left: 20%;
 }
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .mainmenu__main {
     margin-left: 50px;
@@ -1731,12 +1731,12 @@ input[type=color] {
   padding: 45px 0;
 }
 .mainmenu__main > .main-menu > nav > ul > li:nth-child(3) {
-  margin-right: 40px;
+  margin-right: 0px;
 }
 .mainmenu__logo {
   position: absolute;
-  top: 48%;
-  left: 47%;
+  left:25%;
+  top:95px; 
   transform: translateY(-52%);
 }
 
