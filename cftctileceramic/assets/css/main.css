@@ -1381,6 +1381,7 @@ input[type=color] {
 }
 .cat-menu__list li > a i {
   width: 32px;
+  font-size: 8px;
   color: var(--tp-text-primary);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
