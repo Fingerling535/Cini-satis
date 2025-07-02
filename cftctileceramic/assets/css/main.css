@@ -1290,11 +1290,10 @@ input[type=color] {
   }
 }
 .cat-menu__category > a i {
-  margin-right: 15px;
+  margin-right: 16px;
 }
 .cat-menu__category .category-menu {
   background: var(--tp-common-white);
-  width: max-content;
   border: 1px solid var(--tp-border-2);
   border-top: none;
   position: absolute;
@@ -1352,15 +1351,17 @@ input[type=color] {
 .cat-menu__list li {
   list-style: none;
   width: max-content;
+  min-width: 240px;
 }
 .cat-menu__list li > a {
   display: flex;
   color: var(--tp-text-body);
   font-size: 14px;
   font-weight: 400;
-  padding: 9px 25px 5px 25px;
+  padding: 9px 25px 5px 8px;
   background: transparent;
   align-items: center;
+  width: 100%;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
