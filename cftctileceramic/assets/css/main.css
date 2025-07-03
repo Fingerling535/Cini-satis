@@ -3565,7 +3565,7 @@ input[type=color] {
 .tpproduct__priceinfo-oldprice {
   text-decoration: line-through;
 }
-.tpproduct__ammount {
+.tpproduct__ammount-try {
   font-size: 16px;
   font-weight: 600;
 }
@@ -4349,7 +4349,7 @@ input[type=color] {
   color: var(--tp-text-primary);
 }
 
-.tpproduct__ammount del {
+.tpproduct__ammount-try del {
   font-weight: 500;
   color: #747691;
   margin-left: 10px;
