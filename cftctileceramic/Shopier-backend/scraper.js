@@ -11,6 +11,8 @@ axios.get(shopierUrl, {
   }
 }).then((response) => {
   const $ = cheerio.load(response.data);
+
+  const products = [];
   $('.product-card').each((i, el) => {
     const title = $(el).find('.product-card-title > h3').text().trim();
     const price = $(el).find('.price-current .price-value').text().trim();
@@ -25,14 +27,14 @@ axios.get(shopierUrl, {
     // Bu verileri kendi sitene DB'ye kaydet
 
     //Json yazma
-    const product = {
-      "product-title": title,
-      "product-price-try": price,
-      "product-image-1": image
-    };
+     products.push({
+    "product-title": title,
+    "product-price-try": price,
+    "product-image-1": image
+  });
 
     // JSON dosyasına yazma
-    fs.appendFileSync('cftctileceramic/products.json', JSON.stringify(product, null, 2) + ',\n', 'utf-8');
+    fs.writeFileSync('cftctileceramic/products.json', JSON.stringify(products, null, 2) + '\n', 'utf-8');
   });
   console.log('✅ JSON başarıyla kaydedildi!');
 
