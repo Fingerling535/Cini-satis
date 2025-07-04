@@ -495,7 +495,7 @@
                         <div class="row align-items-center">
                            <div class="col-sm-6">
                               <div class="product-item-count">
-                                 <span><b>112</b> Ürün gösteriliyor</span>
+                                 <span>ürün gösteriliyor</span>
                               </div>
                            </div>
                            <div class="col-sm-6">
@@ -1184,9 +1184,11 @@
                const container = document.getElementById('product-container');
                const tpl = document.getElementById('product-template').content;
                
-               
+               const countDiv = document.querySelector('.product-item-count');
+
 
                products.forEach(prod =>{
+                  
                   //template içeriğini kopyalama
                   const clone = document.importNode(tpl, true);
                   const link = clone.querySelector('.product-card-link');
@@ -1198,9 +1200,11 @@
 
                      clone.querySelector('.thumbitem-secondary').src = prod['product-image-2'];
                   } else {
-                     
                      clone.querySelector('.tpproduct__title').textContent = prod['product-title'];
                      clone.querySelector('.tpproduct__ammount-try span').textContent = prod['product-price-try'];
+                    
+                     countDiv.textContent = `Toplam ${products.length} ürün gösteriliyor.`;
+
                }
                   // Ürünü container'a ekleme
                   container.appendChild(clone);
@@ -1210,6 +1214,7 @@
             })
             .catch(err => console.error('Error loading products:', err));
       </script>
+      
 
    </body>
 </html>

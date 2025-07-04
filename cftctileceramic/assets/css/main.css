@@ -3532,7 +3532,7 @@ input[type=color] {
   visibility: visible;
 }
 .tpproduct__thumbitem .thumbitem-primary:hover {
-  transform: scale3d(1.1, 1.1, 1.1) translateZ(0);
+  transform: scale3d(1.1, 1.1, 1.1) translateZ(0) ;
 }
 .tpproduct__title {
   font-size: 15px;
