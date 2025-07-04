@@ -16,21 +16,23 @@ axios.get(shopierUrl, {
     const price = $(el).find('.price-current .price-value').text().trim();
     const image = $(el).find('img').attr('src');
 
+    if (!title || !price || !image) {
+      console.log('Eksik veri bulundu, atlanıyor...');
+      return; // Eksik veri varsa bu ürünü atla
+    }
+
     console.log({ title, price, image });
     // Bu verileri kendi sitene DB'ye kaydet
-  
 
-//Json yazma
+    //Json yazma
     const product = {
       "product-title": title,
       "product-price-try": price,
-      "product-image-1": image,
-      "product-image-2": image, // İkinci resim aynı olarak ayarlandı
-      "product-description": "Ürün açıklaması burada yer alacak." // Örnek açıklama
+      "product-image-1": image
     };
 
     // JSON dosyasına yazma
-    fs.appendFileSync('products.json', JSON.stringify(product, null, 2) + ',\n', 'utf-8');
+    fs.appendFileSync('cftctileceramic/products.json', JSON.stringify(product, null, 2) + ',\n', 'utf-8');
   });
   console.log('✅ JSON başarıyla kaydedildi!');
 

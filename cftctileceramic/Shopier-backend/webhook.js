@@ -25,5 +25,4 @@ function handleWebhook(req, res) {
 
   res.send("OK");
 }
-
 module.exports = { handleWebhook };
