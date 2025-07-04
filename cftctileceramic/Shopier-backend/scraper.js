@@ -17,14 +17,14 @@ axios.get(shopierUrl, {
     const title = $(el).find('.product-card-title > h3').text().trim();
     const price = $(el).find('.price-current .price-value').text().trim();
     const image1 = $(el).find('img').attr('src');
-    const image2 = $(el).find('img').attr('data-src');
+    const pLink = $(el).find('a').attr('href');
 
-    if (!title || !price || !image1) {
+    if (!title || !price || !image1 || !pLink) {
       console.log('Eksik veri bulundu, atlanıyor...');
       return; // Eksik veri varsa bu ürünü atla
     }
 
-    console.log({ title, price, image1, image2 });
+    console.log({ title, price, image1, pLink });
     // Bu verileri kendi sitene DB'ye kaydet
 
     //Json yazma
@@ -32,7 +32,7 @@ axios.get(shopierUrl, {
     "product-title": title,
     "product-price-try": price,
     "product-image-1": image1,
-    "product-image-2": image2
+    "product-link": pLink
   });
 
     // JSON dosyasına yazma

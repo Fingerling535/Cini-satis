@@ -1222,7 +1222,7 @@ input[type=color] {
     margin-left: 25px;
   }
 }
-.header-meta__social a::hover {
+.header-meta__social a:hover {
   color: var(--tp-common-black);
 }
 .header-meta__search-5 {

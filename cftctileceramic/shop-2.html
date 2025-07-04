@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Cftcbrandtech -  Minimal eCommerce HTML Template</title>
+   <title>cftctileceramic</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -451,7 +451,7 @@
                   <span>$0</span>
                </div>
                <div class="tpcart__checkout-btn">
-                  <a class="tpcart-btn mb-10" href="cart.html">SEPETİ GÖR</a>
+                  <a class="tpcart-btn mb-10" href="https://www.shopier.com/s/basket/cftctileceramic">SEPETİ GÖR</a>
                   <a class="tpcheck-btn" href="checkout.html">SİPARİŞİ ONAYLA</a>
                </div>
             </div>
@@ -704,7 +704,7 @@
                                        <div id="product-card" class="tpproduct tpproductitem mb-15 p-relative" >
                                           <div class="tpproduct__thumb">
                                              <div class="tpproduct__thumbitem p-relative">
-                                                <a href="shop-details.html">
+                                                <a href="https://www.shopier.com/37281108" class="product-card-link">
                                                 <img id="product-image-1" class="thumbitem-primary" src="https://cdn.shopier.app/pictures_mid/cftctileceramic_99cdec15472bf9048f79cc6953743f00.png" alt="product-thumb">
                                                 </a>
                                                 <div class="tpproduct__thumb-bg">
@@ -718,7 +718,7 @@
                                              </div>
                                           </div>
                                           <div class="tpproduct__content-area">
-                                             <h3 id="product-card-title" class="tpproduct__title mb-5"><a href="shop-details.html">Yemek Takımı</a></h3>
+                                             <h3 id="product-card-title" class="tpproduct__title mb-5"><a  href="https://www.shopier.com/37281108">Yemek Takımı</a></h3>
                                              <div class="tpproduct__priceinfo p-relative">
                                                 <div id="product-card-price" class="tpproduct__ammount-try">
                                                    <span>25.500</span> TL
@@ -727,7 +727,7 @@
                                           </div>
                                           <div class="tpproduct__ratingarea">
                                              <div class="d-flex align-items-center justify-content-between">
-                                                <div class="tpproductdot">
+                                                <!-- <div class="tpproductdot">
                                                    <a class="tpproductdot__variationitem" href="shop-details.html">
                                                       <div class="tpproductdot__termshape">
                                                          <span class="tpproductdot__termshape-bg"></span>
@@ -752,7 +752,7 @@
                                                          <span class="tpproductdot__termshape-border purple-product-border"></span>
                                                       </div>
                                                    </a>
-                                                </div>
+                                                </div> -->
                                                 <div class="tpproduct__rating">
                                                    <ul>
                                                       <li>
@@ -1184,9 +1184,13 @@
                const container = document.getElementById('product-container');
                const tpl = document.getElementById('product-template').content;
                
+               
+
                products.forEach(prod =>{
                   //template içeriğini kopyalama
                   const clone = document.importNode(tpl, true);
+                  const link = clone.querySelector('.product-card-link');
+                  link.href = prod['product-link'];
                   // Kopyalanan içeriği products div'ine ekleme
                   clone.querySelector('.thumbitem-primary').src = prod['product-image-1'];
                   // Eğer ikinci resim varsa onu da yükle - Tek koymak istersen else kısmını kaldırabilirsin
