@@ -1,4 +1,5 @@
    function loadProducts() {
+      const products = document.querySelector('.product-card');
 
          // JSON dosyasını yükleme
          
