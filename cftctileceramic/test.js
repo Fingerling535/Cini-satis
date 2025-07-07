@@ -1,42 +1,38 @@
-   function loadProducts() {
-      const products = document.querySelector('.product-card');
+function loadProducts() {
+  fetch('./products.json')
+    .then(res => res.json())
+    .then(items => {
+      const container = document.getElementById('product-container');
+      const tpl = document.getElementById('product-template').content;
+      const countDiv = document.querySelector('.product-item-count');
 
-         // JSON dosyasını yükleme
-         
-         fetch('./products.json')
-            .then(response => response.json())
-            .then(products => {
-               const container = document.getElementById('product-container');
-               const tpl = document.getElementById('product-template').content;
-               
-               const countDiv = document.querySelector('.product-item-count');
+      items.forEach(prod => {
+        const clone = document.importNode(tpl, true);
 
+        // link
+        clone.querySelector('.product-card-link').href = prod['product-link'];
 
-               products.forEach(prod =>{
-                  
-                  //template içeriğini kopyalama
-                  const clone = document.importNode(tpl, true);
-                  const link = clone.querySelector('.product-card-link');
-                  link.href = prod['product-link'];
-                  // Kopyalanan içeriği products div'ine ekleme
-                  clone.querySelector('.thumbitem-primary').src = prod['product-image-1'];
-                  // Eğer ikinci resim varsa onu da yükle - Tek koymak istersen else kısmını kaldırabilirsin
-                  if(prod['product-image-2']) {
+        // birinci resim
+        clone.querySelector('.thumbitem-primary').src = prod['product-image-1'];
 
-                     clone.querySelector('.thumbitem-secondary').src = prod['product-image-2'];
-                  } else {
-                     clone.querySelector('.tpproduct__title').textContent = prod['product-title'];
-                     clone.querySelector('.tpproduct__ammount-try span').textContent = prod['product-price-try'];
-                    
-                     countDiv.textContent = `Toplam ${products.length} ürün gösteriliyor.`;
+        // varsa ikinci resim
+        if (prod['product-image-2']) {
+          clone.querySelector('.thumbitem-secondary').src = prod['product-image-2'];
+        }
 
-               }
-                  // Ürünü container'a ekleme
-                  container.appendChild(clone);
-               });
+        // başlık ve fiyatı her durumda ata
+        clone.querySelector('.tpproduct__title').textContent = prod['product-title'];
+        clone
+          .querySelector('.tpproduct__ammount-try span')
+          .textContent = prod['product-price-try'];
 
-               console.log(products);
-            })
-            .catch(err => console.error('Error loading products:', err));
-   }
-      loadProducts();
+        container.appendChild(clone);
+      });
+
+      // ürün sayısını döngüden sonra güncelle
+      countDiv.textContent = `Toplam ${items.length} ürün gösteriliyor.`;
+    })
+    .catch(err => console.error('Error loading products:', err));
+}
+
+loadProducts();
