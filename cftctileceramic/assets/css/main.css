@@ -8219,6 +8219,11 @@ p.checkout-coupon input[type=text]:focus {
   -o-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
+.footer-widget__links ul li a .shopier-icon{
+margin-right: 18px;
+justify-content: flex-start;
+align-items: center;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-widget__links ul li a {
     font-size: 15px;
