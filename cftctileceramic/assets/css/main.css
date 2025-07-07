@@ -1415,7 +1415,7 @@ input[type=color] {
   top: 0;
   bottom: 0;
   padding-left: 16px;
-  padding-top: 1.25rem;
+  padding-top: 0.6rem;
   list-style: none;
   background-color: var(--tp-common-white);
   border-left: 1px solid var(--tp-border-1);
