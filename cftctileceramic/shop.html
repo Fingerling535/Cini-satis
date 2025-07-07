@@ -1186,37 +1186,7 @@
       <script src="/cftctileceramic/test.js"></script>
       <script src="Shopier-backend/scraper.js"></script>
       
-      <script>
-               document.addEventListener('DOMContentLoaded', () => {
-               const checks = document.querySelectorAll('.form-price-input[type=checkbox]');
-               const products = document.querySelectorAll('.tpproduct .tpproductitem');
-
-               function filterByPrice() {
-                  // Seçili aralıkları topla
-                  const ranges = Array.from(checks)
-                     .filter(cb => cb.checked)
-                     .map(cb => ({
-                     min: +cb.dataset.min,
-                     max: +cb.dataset.max
-                     }));
-                  // Ürünleri döngüle
-                  products.forEach(prod => {
-                     const price = +prod.dataset.price; // <div data-price="3450"> gibi
-                     const ok = ranges.length === 0 
-                     ? true 
-                     : ranges.some(r => price >= r.min && price <= r.max);
-                     prod.style.display = ok ? '' : 'none';
-                  });
-               }
-
-               // Her checkbox değişiminde filtreyi tetikle
-               checks.forEach(cb => cb.addEventListener('change', filterByPrice));
-
-               // Sayfa açılır açılmaz göster
-               filterByPrice();
-               console.log('Filtreleme işlemi tamamlandı.');
-               });
-      </script>
+      
 
    </body>
 </html>
