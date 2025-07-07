@@ -601,9 +601,9 @@
                            <div class="product-sidebar__info">
                               <h4 class="product-sidebar__title mb-20">Renk Seçimi</h4>
                               <div class="form-check">
-                                 <input class="form-check-input black-input" type="checkbox" value="" id="flexCheckDefault12">
+                                 <input class="form-check-input red-input" type="checkbox" value="" id="flexCheckDefault12">
                                  <label class="form-check-label" for="flexCheckDefault12">
-                                    Siyah
+                                    Kırmızı
                                  </label>
                               </div>
                               <div class="form-check">
@@ -613,12 +613,12 @@
                                  </label>
                               </div>
                               <div class="form-check">
-                                 <input class="form-check-input grey-input" type="checkbox" value="" id="flexCheckChecked14">
+                                 <input class="form-check-input green-input" type="checkbox" value="" id="flexCheckChecked14">
                                  <label class="form-check-label" for="flexCheckChecked14">
-                                    Gri
+                                    Yeşil
                                  </label>
                               </div>
-                              <div class="form-check">
+                              <!-- <div class="form-check">
                                  <input class="form-check-input green-input" type="checkbox" value="" id="flexCheckChecked15">
                                  <label class="form-check-label" for="flexCheckChecked15">
                                     Yeşil
@@ -629,13 +629,13 @@
                                  <label class="form-check-label" for="flexCheckChecked16">
                                     Kırmızı
                                  </label>
-                              </div>
-                              <div class="form-check">
+                              </div> -->
+                              <!-- <div class="form-check">
                                  <input class="form-check-input yellow-input" type="checkbox" value="" id="flexCheckChecked17">
                                  <label class="form-check-label" for="flexCheckChecked17">
                                     Sarı
                                  </label>
-                              </div>
+                              </div> -->
                            </div>
                         </div>
                         <div class="product-sidebar__widget mb-30">
@@ -656,35 +656,35 @@
                            </div>
                         </div>
                         <div class="product-sidebar__widget mb-30">
-                           <div class="product-sidebar__info product-info-list product-color-list">
+                           <div class="product-sidebar__info product-info-list product-price-list">
                               <h4 class="product-sidebar__title mb-20">Fiyat</h4>
                               <div class="form-check">
-                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault18">
-                                 <label class="form-check-label" for="flexCheckDefault18">
+                                 <input class="form-check-input" type="checkbox" data-min="500" data-max="2.499" id="priceRange1">
+                                 <label class="form-check-label" for="priceRange1">
                                    500 TL - 2.499 TL
                                  </label>
                               </div>
                               <div class="form-check">
-                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked19">
-                                 <label class="form-check-label" for="flexCheckChecked19">
+                                 <input class="form-check-input" type="checkbox" data-min="5.000" data-max="9.999" id="priceRange2">
+                                 <label class="form-check-label" for="priceRange2">
                                     5.000 TL - 9.999 TL
                                  </label>
                               </div>
                               <div class="form-check">
-                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked20">
-                                 <label class="form-check-label" for="flexCheckChecked20">
+                                 <input class="form-check-input" type="checkbox" data-min="10.000" data-max="14.999" id="priceRange3">
+                                 <label class="form-check-label" for="priceRange3">
                                     10.000 TL - 14.999 TL
                                  </label>
                               </div>
                               <div class="form-check">
-                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked21">
-                                 <label class="form-check-label" for="flexCheckChecked21">
+                                 <input class="form-check-input" type="checkbox" data-min="15.000" data-max="24.999" id="priceRange4">
+                                 <label class="form-check-label" for="priceRange4">
                                     15.000 TL ve 24.999 TL
                                  </label>
                               </div>
                               <div class="form-check">
-                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked21">
-                                 <label class="form-check-label" for="flexCheckChecked21">
+                                 <input class="form-check-input" type="checkbox" data-min="25.000" data-max="99.999" id="priceRange5">
+                                 <label class="form-check-label" for="priceRange5">
                                     25.000 TL ve Üzeri
                                  </label>
                               </div>
@@ -925,8 +925,8 @@
                                           <div class="tpproduct__content-area">
                                              <h3 id="product-card-title" class="tpproduct__title mb-5"><a  href="https://www.shopier.com/37281108">Yemek Takımı</a></h3>
                                              <div class="tpproduct__priceinfo p-relative">
-                                                <div id="product-card-price" class="tpproduct__ammount-try">
-                                                   <span>25.500</span> TL
+                                                <div id="product-card-price" class="tpproduct__ammount-try" data-price="">
+                                                   <span>${prod.price.trim()}</span> TL
                                                 </div>
                                              </div>
                                           </div>
@@ -1185,49 +1185,38 @@
       <script src="Shopier-backend/webhook.js"></script>
       <script src="/cftctileceramic/test.js"></script>
       <script src="Shopier-backend/scraper.js"></script>
-      <script>
-         // products div'ini seçme
-         const products = document.querySelector('.product-card');
-
-         // JSON dosyasını yükleme
-         
-         fetch('./products.json')
-            .then(response => response.json())
-            .then(products => {
-               const container = document.getElementById('product-container');
-               const tpl = document.getElementById('product-template').content;
-               
-               const countDiv = document.querySelector('.product-item-count');
-
-
-               products.forEach(prod =>{
-                  
-                  //template içeriğini kopyalama
-                  const clone = document.importNode(tpl, true);
-                  const link = clone.querySelector('.product-card-link');
-                  link.href = prod['product-link'];
-                  // Kopyalanan içeriği products div'ine ekleme
-                  clone.querySelector('.thumbitem-primary').src = prod['product-image-1'];
-                  // Eğer ikinci resim varsa onu da yükle - Tek koymak istersen else kısmını kaldırabilirsin
-                  if(prod['product-image-2']) {
-
-                     clone.querySelector('.thumbitem-secondary').src = prod['product-image-2'];
-                  } else {
-                     clone.querySelector('.tpproduct__title').textContent = prod['product-title'];
-                     clone.querySelector('.tpproduct__ammount-try span').textContent = prod['product-price-try'];
-                    
-                     countDiv.textContent = `Toplam ${products.length} ürün gösteriliyor.`;
-
-               }
-                  // Ürünü container'a ekleme
-                  container.appendChild(clone);
-               });
-
-               console.log(products);
-            })
-            .catch(err => console.error('Error loading products:', err));
-      </script>
       
+      <script>
+               document.addEventListener('DOMContentLoaded', () => {
+               const checks = document.querySelectorAll('.form-price-input[type=checkbox]');
+               const products = document.querySelectorAll('.tpproduct .tpproductitem');
+
+               function filterByPrice() {
+                  // Seçili aralıkları topla
+                  const ranges = Array.from(checks)
+                     .filter(cb => cb.checked)
+                     .map(cb => ({
+                     min: +cb.dataset.min,
+                     max: +cb.dataset.max
+                     }));
+                  // Ürünleri döngüle
+                  products.forEach(prod => {
+                     const price = +prod.dataset.price; // <div data-price="3450"> gibi
+                     const ok = ranges.length === 0 
+                     ? true 
+                     : ranges.some(r => price >= r.min && price <= r.max);
+                     prod.style.display = ok ? '' : 'none';
+                  });
+               }
+
+               // Her checkbox değişiminde filtreyi tetikle
+               checks.forEach(cb => cb.addEventListener('change', filterByPrice));
+
+               // Sayfa açılır açılmaz göster
+               filterByPrice();
+               console.log('Filtreleme işlemi tamamlandı.');
+               });
+      </script>
 
    </body>
 </html>
