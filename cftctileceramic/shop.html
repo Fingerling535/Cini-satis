@@ -665,9 +665,9 @@
                                  </label>
                               </div>
                               <div class="form-check">
-                                 <input class="form-check-input" type="checkbox" data-min="5.000" data-max="9.999" id="priceRange2">
+                                 <input class="form-check-input" type="checkbox" data-min="2.500" data-max="9.999" id="priceRange2">
                                  <label class="form-check-label" for="priceRange2">
-                                    5.000 TL - 9.999 TL
+                                    2.500 TL - 9.999 TL
                                  </label>
                               </div>
                               <div class="form-check">
@@ -925,7 +925,7 @@
                                           <div class="tpproduct__content-area">
                                              <h3 id="product-card-title" class="tpproduct__title mb-5"><a  href="https://www.shopier.com/37281108">Yemek Takımı</a></h3>
                                              <div class="tpproduct__priceinfo p-relative">
-                                                <div id="product-card-price" class="tpproduct__ammount-try" data-price="">
+                                                <div id="product-card-price" class="tpproduct__ammount-try" data-price="2500">
                                                    <span>${prod.price.trim()}</span> TL
                                                 </div>
                                              </div>
@@ -1184,6 +1184,7 @@
       <script src="Shopier-backend/shopier.js"></script>
       <script src="Shopier-backend/webhook.js"></script>
       <script src="Shopier-backend/scraper.js"></script>
+      
       <script>
           const products = document.querySelector('.product-card');
 
@@ -1213,7 +1214,7 @@
                   } else {
                      clone.querySelector('.tpproduct__title').textContent = prod['product-title'];
                      clone.querySelector('.tpproduct__ammount-try span').textContent = prod['product-price-try'];
-                    
+                     clone.querySelector('.tpproduct__ammount-try').dataset.price = prod['product-price-try'];
                      countDiv.textContent = `Toplam ${products.length} ürün gösteriliyor.`;
 
                }
@@ -1224,9 +1225,42 @@
                console.log(products);
             })
             .catch(err => console.error('Error loading products:', err));
-      
-
       </script>
+      <script>
+         // 1. Select all price filter checkboxes
+         const priceCheckboxes = document.querySelectorAll('.product-price-list .form-check-input[data-min][data-max]');
+
+         // 2. Listen for changes
+         priceCheckboxes.forEach(cb => {
+         cb.addEventListener('change', () => {
+            // Collect all checked ranges
+            const checkedRanges = Array.from(priceCheckboxes)
+               .filter(cb => cb.checked)
+               .map(cb => ({
+               min: parseFloat(cb.getAttribute('data-min').replace('.', '').replace(',', '.')),
+               max: parseFloat(cb.getAttribute('data-max').replace('.', '').replace(',', '.'))
+               }));
+
+            // If none checked, show all
+            if (checkedRanges.length === 0) {
+               document.querySelectorAll('.tpproductitem').forEach(card => card.style.display = '');
+               return;
+            }
+
+            // Show products that match any selected range
+            document.querySelectorAll('.tpproductitem').forEach(card => {
+               const priceDiv = card.querySelector('.tpproduct__ammount-try');
+               if (priceDiv) {
+               const price = parseFloat(priceDiv.dataset.price.replace('.', '').replace(',', '.'));
+               const match = checkedRanges.some(range => price >= range.min && price <= range.max);
+               card.style.display = match ? '' : 'none';
+
+               }
+            });
+         });
+         });
+      </script>
+
 
    </body>
 </html>

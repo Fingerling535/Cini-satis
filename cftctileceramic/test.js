@@ -1,6 +1,6 @@
-   function loadProducts() {
 
          // JSON dosyasını yükleme
+   window.addEventListener('DOMContentLoaded', () => {
          
          fetch('./products.json')
             .then(response => response.json())
@@ -37,5 +37,4 @@
                console.log(products);
             })
             .catch(err => console.error('Error loading products:', err));
-   }
-      loadProducts();
+   });
