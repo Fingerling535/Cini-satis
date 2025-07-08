@@ -1061,8 +1061,9 @@ input[type=color] {
 }
 .tpsection__title span img {
   position: absolute;
+  max-height: 2px;
   left: 0;
-  bottom: 1px;
+  bottom: 3px;
   z-index: -1;
   animation: section-animation 2s infinite;
 }
@@ -2520,13 +2521,16 @@ input[type=color] {
   font-style: normal;
   color: var(--tp-text-primary);
   position: relative;
+  
 }
 .tp-slide-item__title i img {
   position: absolute;
-  left: -6px;
+  left: -2px;
   bottom: 10px;
   z-index: -1;
   animation: section-animation 3s infinite;
+  max-height: 3px;
+  max-width: max-content;
 }
 /* %lik oranlar için responsive ayarları */
 @media (max-width: 767px) { 
