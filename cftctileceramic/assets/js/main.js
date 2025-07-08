@@ -37,6 +37,17 @@
 			$('.scroll-to-target').addClass('open');
 		}
 	});
+	///////////////////////////////////////////////////
+	// 01a  Scroll to footer
+	windowOn.on('scroll', function () {
+		var scroll = windowOn.scrollEnd();
+		if (scroll < 245) {
+			$('.scroll-end').removeClass('open');
+
+		} else {
+			$('.scroll-end').addClass('open');
+		}
+	});
 
 	///////////////////////////////////////////////////
 	// 02. Scroll Up Js

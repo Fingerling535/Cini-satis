@@ -38,10 +38,13 @@
    <!-- preloader end  -->
 
    <!-- Scroll-top -->
-   <button class="scroll-top scroll-to-target" data-target="html">
-      <i class="fas fa-angle-up"></i>
-   </button>
-   <!-- Scroll-top-end-->
+         <button class="scroll-top scroll-to-target" data-target="html">
+            <i class="fas fa-angle-up"></i>
+         </button>
+         <button class="scroll-end scroll-to-target" data-target="footer">
+            <i class="fas fa-angle-down"></i>
+         </button>
+      <!-- Scroll-top-end-->
 
    <!-- header-area-start -->
    <header>
@@ -1226,10 +1229,10 @@
             .catch(err => console.error('Error loading products:', err));
       </script>
       <script>
-         // 1. Select all price filter checkboxes
+            // 1. Select all price filter checkboxes
          const priceCheckboxes = document.querySelectorAll('.product-price-list .form-check-input[data-min][data-max]');
 
-         // 2. Listen for changes
+            // 2. Listen for changes
          priceCheckboxes.forEach(cb => {
          cb.addEventListener('change', () => {
             // Collect all checked ranges
@@ -1253,13 +1256,14 @@
                const price = parseFloat(priceDiv.dataset.price.replace('.', '').replace(',', '.'));
                const match = checkedRanges.some(range => price >= range.min && price <= range.max);
                card.style.display = match ? '' : 'none';
+               
 
                }
             });
          });
          });
       </script>
-
+      
 
    </body>
 </html>

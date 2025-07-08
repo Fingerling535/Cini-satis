@@ -375,7 +375,7 @@ input[type=color] {
 }
 
 .scroll-top.open {
-  bottom: 30px;
+  bottom: 80px;
 }
 
 .scroll-top::after {
@@ -393,7 +393,52 @@ input[type=color] {
 .scroll-top:hover {
   background: var(--tp-text-body);
 }
+/* scrolldown */
+.scroll-end {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  bottom: -10%;
+  right: 50px;
+  font-size: 16px;
+  border-radius: 6px;
+  z-index: 99;
+  color: var(--tp-common-white);
+  text-align: center;
+  cursor: pointer;
+  background: var(--tp-text-primary);
+  transition: 1s ease;
+  border: none;
+}
+@media (max-width: 767px) {
+  .scroll-end {
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
 
+.scroll-end.open {
+  bottom: 30px;
+}
+
+.scroll-end::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  bottom: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 1;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}
+
+.scroll-end:hover {
+  background: var(--tp-text-body);
+}
 /*----------------------------------------*/
 /*  Spacing
 /*----------------------------------------*/
@@ -3745,6 +3790,7 @@ input[type=color] {
   z-index: 9;
   background-color: #fff;
   padding-bottom: 10px;
+  
 }
 .tpproductitem:hover .product-content-fade {
   opacity: 1;
