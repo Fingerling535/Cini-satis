@@ -40,7 +40,7 @@
 	///////////////////////////////////////////////////
 	// 01a  Scroll to footer
 	windowOn.on('scroll', function () {
-		var scroll = windowOn.scrollEnd();
+		var scroll = windowOn.scrollBottom();
 		if (scroll < 245) {
 			$('.scroll-end').removeClass('open');
 
