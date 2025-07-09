@@ -23,7 +23,7 @@
       <link rel="stylesheet" href="assets/css/main.css">
    </head>
    <body>
-      <div id="google_translate_element" style="display:block;"></div>
+      
       <!-- preloader -->
       <div id="preloader">
          <div class="preloader">
@@ -78,7 +78,6 @@
                            <div class="header-meta__lang">
                               <ul>
                                  <li>
-                                    <div id="google_translate_element"></div>
                                     <a href="#">
                                        <img id="currentFlag" src="assets/img/icon/tr-flag.png" alt="flag">
                                        <span id="currentLanguage">Türkçe</span>
@@ -2183,51 +2182,43 @@
       <script src="Shopier-backend/scraper.js"></script>
      
       
-      <script type="text/javascript">
-        
+
+   <script defer>
       function googleTranslateElementInit() {
          new google.translate.TranslateElement({
-            pageLanguage: 'tr',
-            includedLanguages: 'tr,en,ar',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+         pageLanguage: 'tr',
+         includedLanguages: 'tr,en,ar',
+         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
          }, 'google_translate_element');
       }
-      // function triggerGoogleTranslate(targetLang) {
-      // const combo = document.querySelector('.goog-te-combo');
-      // if (!combo) return;
-      // combo.value = targetLang;                  // 'en' ya da 'tr'
-      // combo.dispatchEvent(new Event('change'));  // translate widget’ını harekete geçirme
+   </script>
+   <script>
+         function triggerGoogleTranslate(lang) {
+            const combo = document.querySelector('.goog-te-combo');
+            if (!combo) return;
+            combo.value = lang;
+            combo.dispatchEvent(new Event('change'));
+         }
 
-      // const languageLinks = document.querySelectorAll("#google_translate_element");
-      // const currentFlag    = document.getElementById("currentFlag");
-      // const currentLanguage= document.getElementById("currentLanguage");
-
-      // languageLinks.forEach(link => {
-      // link.addEventListener("click", function(e) {
-      //    e.preventDefault();
-
-      //    // Seçilen değerler
-      //    const selectedLang = this.getAttribute("data-lang");   // örn: 'en'
-      //    const selectedFlag = this.getAttribute("data-flag");   // bayrak URL’si
-      //    const selectedText = this.textContent;                 // "English"
-
-      //    // Menüdeki görsel ve metni güncelle
-      //    currentFlag.src = selectedFlag;
-      //    currentLanguage.textContent = selectedText;
-
-      //    // Google Translate widget’ını tetikle
-      //    triggerGoogleTranslate(selectedLang);
-      // });
-      // });
-
-      // }
-
-
+         document.querySelectorAll('.header-meta__lang-submenu a')
+            .forEach(link => {
+            link.addEventListener('click', e => {
+               e.preventDefault();
+               const lang = link.getAttribute('data-lang');
+               const flag = link.getAttribute('data-flag');
+               const text = link.textContent;
+               document.getElementById('currentFlag').src = flag;
+               document.getElementById('currentLanguage').textContent = text;
+               triggerGoogleTranslate(lang);
+            });
+            });
       </script>
-      <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-       
 
       
+      <script defer 
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+      </script>
+       
 
    </body>
 </html>
