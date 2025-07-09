@@ -2192,35 +2192,35 @@
             layout: google.translate.TranslateElement.InlineLayout.SIMPLE
          }, 'google_translate_element');
       }
-      function triggerGoogleTranslate(targetLang) {
-      const combo = document.querySelector('.goog-te-combo');
-      if (!combo) return;
-      combo.value = targetLang;                  // 'en' ya da 'tr'
-      combo.dispatchEvent(new Event('change'));  // translate widget’ını harekete geçirme
+      // function triggerGoogleTranslate(targetLang) {
+      // const combo = document.querySelector('.goog-te-combo');
+      // if (!combo) return;
+      // combo.value = targetLang;                  // 'en' ya da 'tr'
+      // combo.dispatchEvent(new Event('change'));  // translate widget’ını harekete geçirme
 
-      const languageLinks = document.querySelectorAll("#google_translate_element");
-      const currentFlag    = document.getElementById("currentFlag");
-      const currentLanguage= document.getElementById("currentLanguage");
+      // const languageLinks = document.querySelectorAll("#google_translate_element");
+      // const currentFlag    = document.getElementById("currentFlag");
+      // const currentLanguage= document.getElementById("currentLanguage");
 
-      languageLinks.forEach(link => {
-      link.addEventListener("click", function(e) {
-         e.preventDefault();
+      // languageLinks.forEach(link => {
+      // link.addEventListener("click", function(e) {
+      //    e.preventDefault();
 
-         // Seçilen değerler
-         const selectedLang = this.getAttribute("data-lang");   // örn: 'en'
-         const selectedFlag = this.getAttribute("data-flag");   // bayrak URL’si
-         const selectedText = this.textContent;                 // "English"
+      //    // Seçilen değerler
+      //    const selectedLang = this.getAttribute("data-lang");   // örn: 'en'
+      //    const selectedFlag = this.getAttribute("data-flag");   // bayrak URL’si
+      //    const selectedText = this.textContent;                 // "English"
 
-         // Menüdeki görsel ve metni güncelle
-         currentFlag.src = selectedFlag;
-         currentLanguage.textContent = selectedText;
+      //    // Menüdeki görsel ve metni güncelle
+      //    currentFlag.src = selectedFlag;
+      //    currentLanguage.textContent = selectedText;
 
-         // Google Translate widget’ını tetikle
-         triggerGoogleTranslate(selectedLang);
-      });
-      });
+      //    // Google Translate widget’ını tetikle
+      //    triggerGoogleTranslate(selectedLang);
+      // });
+      // });
 
-}
+      // }
 
 
       </script>
