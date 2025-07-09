@@ -23,7 +23,7 @@
       <link rel="stylesheet" href="assets/css/main.css">
    </head>
    <body>
-
+      <div id="google_translate_element" style="display:block;"></div>
       <!-- preloader -->
       <div id="preloader">
          <div class="preloader">
@@ -2142,7 +2142,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-xl-6 col-lg-7 col-md-5 col-sm-12">
-                        shop.html<div class="footer-copyright__content">
+                        <div class="footer-copyright__content">
                            <span>Copyright 2025 <a href="index.html">@CFTCTileceramic</a>. All rights reserved. Powered by <a href="https://www.cftcbrandtech.com">@CFTCBrandTech</a>.</span>
                         </div>
                      </div>
@@ -2181,7 +2181,51 @@
       <script src="Shopier-backend/shopier.js"></script>
       <script src="Shopier-backend/webhook.js"></script>
       <script src="Shopier-backend/scraper.js"></script>
+     
       
+      <script type="text/javascript">
+        
+      function googleTranslateElementInit() {
+         new google.translate.TranslateElement({
+            pageLanguage: 'tr',
+            includedLanguages: 'tr,en,ar',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+         }, 'google_translate_element');
+      }
+      function triggerGoogleTranslate(targetLang) {
+      const combo = document.querySelector('.goog-te-combo');
+      if (!combo) return;
+      combo.value = targetLang;                  // 'en' ya da 'tr'
+      combo.dispatchEvent(new Event('change'));  // translate widget’ını harekete geçirme
+
+      const languageLinks = document.querySelectorAll("#google_translate_element");
+      const currentFlag    = document.getElementById("currentFlag");
+      const currentLanguage= document.getElementById("currentLanguage");
+
+      languageLinks.forEach(link => {
+      link.addEventListener("click", function(e) {
+         e.preventDefault();
+
+         // Seçilen değerler
+         const selectedLang = this.getAttribute("data-lang");   // örn: 'en'
+         const selectedFlag = this.getAttribute("data-flag");   // bayrak URL’si
+         const selectedText = this.textContent;                 // "English"
+
+         // Menüdeki görsel ve metni güncelle
+         currentFlag.src = selectedFlag;
+         currentLanguage.textContent = selectedText;
+
+         // Google Translate widget’ını tetikle
+         triggerGoogleTranslate(selectedLang);
+      });
+      });
+
+}
+
+
+      </script>
+      <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+       
 
       
 
