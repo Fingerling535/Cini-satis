@@ -40,12 +40,12 @@
 	///////////////////////////////////////////////////
 	// 01a  Scroll to footer
 	windowOn.on('scroll', function () {
-		var scroll = windowOn.scrollBottom();
+		var scroll = windowOn.scrollTop();
 		if (scroll < 245) {
-			$('.scroll-end').removeClass('open');
+			$('.scroll-end').addClass('open');
 
 		} else {
-			$('.scroll-end').addClass('open');
+			$('.scroll-end').removeClass('open');
 		}
 	});
 

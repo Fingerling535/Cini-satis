@@ -20,6 +20,7 @@
     "fs": "^0.0.1-security",
     "index.js": "^0.0.3",
     "isotope": "^1.0.0-alpha.3",
+    "isotope-layout": "^3.0.6",
     "puppeteer": "^24.11.2",
     "render": "^0.1.4"
   }

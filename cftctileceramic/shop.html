@@ -1187,6 +1187,8 @@
       <script src="Shopier-backend/shopier.js"></script>
       <script src="Shopier-backend/webhook.js"></script>
       <script src="Shopier-backend/scraper.js"></script>
+      
+      
       <script>
           const products = document.querySelector('.product-card');
 
@@ -1231,7 +1233,7 @@
       <script>
             // 1. Select all price filter checkboxes
          const priceCheckboxes = document.querySelectorAll('.product-price-list .form-check-input[data-min][data-max]');
-
+         
             // 2. Listen for changes
          priceCheckboxes.forEach(cb => {
          cb.addEventListener('change', () => {
@@ -1250,18 +1252,22 @@
             }
 
             // Show products that match any selected range
+            let col = document.querySelectorAll('.col');
             document.querySelectorAll('.tpproductitem').forEach(card => {
                const priceDiv = card.querySelector('.tpproduct__ammount-try');
                if (priceDiv) {
                const price = parseFloat(priceDiv.dataset.price.replace('.', '').replace(',', '.'));
                const match = checkedRanges.some(range => price >= range.min && price <= range.max);
                card.style.display = match ? '' : 'none';
-               } 
+               
+               }
             });
+
          });
-         });
-      </script>
-      
+      });
+   ;
+   </script>
+
 
    </body>
 </html>
