@@ -30,7 +30,7 @@
 	// 01.  Scroll to top
 	windowOn.on('scroll', function () {
 		var scroll = windowOn.scrollTop();
-		if (scroll < 245) {
+		if (scroll < 500) {
 			$('.scroll-to-target').removeClass('open');
 
 		} else {
@@ -41,7 +41,7 @@
 	// 01a  Scroll to footer
 	windowOn.on('scroll', function () {
 		var scroll = windowOn.scrollTop();
-		if (scroll < 245) {
+		if (scroll < 500) {
 			$('.scroll-end').addClass('open');
 
 		} else {
