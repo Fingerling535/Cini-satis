@@ -1975,7 +1975,7 @@
                const container = document.getElementById('product-container');
                const tpl = document.getElementById('product-template').content;
                
-               products.forEach(prod =>{
+               products.slice(0, 10).forEach(prod =>{
                   
                   //template içeriğini kopyalama
                   const clone = document.importNode(tpl, true);
