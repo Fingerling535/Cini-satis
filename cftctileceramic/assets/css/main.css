@@ -4266,7 +4266,7 @@ input[type=color] {
 /*  07. SHOP CSS START
 /*----------------------------------------*/
 .tpshopitem {
-  height: 220px;
+  height: 100%;
   width: 220px;
   object-fit: cover;
 }
@@ -4276,7 +4276,7 @@ input[type=color] {
   opacity: 70%;
 }
 .tpshopitem img:hover {
-  transition: 0.7s;
+  transition: ease-in-out;
   opacity: 100%;
 }
 
