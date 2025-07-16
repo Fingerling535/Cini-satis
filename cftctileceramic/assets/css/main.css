@@ -4273,7 +4273,13 @@ input[type=color] {
 .tpshopitem img {
   width: 100%;
   border-radius: 6px;
+  opacity: 70%;
 }
+.tpshopitem img:hover {
+  transition: 0.7s;
+  opacity: 100%;
+}
+
 @media (max-width: 767px) {
   .tpshopitem {
     text-align: center;
