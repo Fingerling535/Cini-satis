@@ -640,7 +640,12 @@
     currentLanguage.textContent = selectedText;
   });
 });
+	const shoppingChart = getElementById("shoppingChart");
 
+	shoppingChart.onclick=window.location.href = "https://www.shopier.com/s/basket/cftctileceramic";
+	
+
+	
 
 
 })(jQuery);
