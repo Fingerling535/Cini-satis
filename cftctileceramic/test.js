@@ -1,6 +1,9 @@
 
          // JSON dosyasını yükleme
-   window.addEventListener('DOMContentLoaded', () => {
+   
+          const products = document.querySelector('.product-card');
+
+         // JSON dosyasını yükleme
          
          fetch('./products.json')
             .then(response => response.json())
@@ -26,7 +29,7 @@
                   } else {
                      clone.querySelector('.tpproduct__title').textContent = prod['product-title'];
                      clone.querySelector('.tpproduct__ammount-try span').textContent = prod['product-price-try'];
-                    
+                     clone.querySelector('.tpproduct__ammount-try').dataset.price = prod['product-price-try'];
                      countDiv.textContent = `Toplam ${products.length} ürün gösteriliyor.`;
 
                }
@@ -37,4 +40,4 @@
                console.log(products);
             })
             .catch(err => console.error('Error loading products:', err));
-   });
+      
