@@ -1,12 +1,29 @@
 {
-  "name": "cini-satis",
+  "name": "cftc-tile-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index.js"
+    "dev": "nodemon --watch src --exec \"npx ts-node src/index.ts\"",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-     "reflect-metadata": "^0.1.13"
+    "orm": "^8.0.1",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.25"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.18",
+    "@types/pg": "^8.15.4",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   }
 }
