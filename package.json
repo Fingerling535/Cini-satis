@@ -2,10 +2,11 @@
   "name": "cftc-tile-backend",
   "version": "1.0.0",
   "main": "index.js",
+ 
   "scripts": {
-    "build": "tsc -p back-end/tsconfig.json",
-    "start": "npm run build && node index.js"
-  },
+  "start": "node index.js"
+},
+
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
