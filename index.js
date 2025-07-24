@@ -1,12 +1,22 @@
 const express = require('express');
-const path = require('path');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static('cftctileceramic'));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'cftctileceramic', 'index.html'));
+app.get('/', (req, res) => {
+  res.send('Çini satış backend çalışıyor!');
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Sunucu ${PORT} portunda çalışıyor`);
+});
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Çini satış backend çalışıyor!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Sunucu ${PORT} portunda çalışıyor`);
+});
