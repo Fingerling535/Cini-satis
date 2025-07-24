@@ -8,7 +8,7 @@ app.use(express.static(__dirname));
 
 // Optionally, serve index.html on root
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'cftctileceramic/index.html'));
 });
 
 app.listen(PORT, () => {
