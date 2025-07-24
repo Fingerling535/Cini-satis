@@ -7,8 +7,8 @@ require("reflect-metadata");
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const db_1 = require("./back-end/dist/config/db");
-const productRoutes_1 = __importDefault(require("./back-end/dist/routes/productRoutes"));
+const db_1 = require("back-end/dist/config/db.js");
+const productRoutes_1 = __importDefault(require("back-end/dist/routes/productRoutes"));
 dotenv_1.default.config();
 async function bootstrap() {
     await (0, db_1.initializeDatabase)();
