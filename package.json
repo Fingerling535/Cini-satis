@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "build": "tsc -p back-end/tsconfig.json",
+    "start": "npm run build && node index.js"
+    
   },
   "dependencies": {
     "cors": "^2.8.5",
