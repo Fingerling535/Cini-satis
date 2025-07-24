@@ -1,11 +1,11 @@
 {
   "name": "cftc-tile-backend",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --exec \"npx ts-node src/index.ts\"",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
