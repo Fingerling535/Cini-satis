@@ -1,5 +1,11 @@
-npm init -y
-npm install express
-"scripts": {
-  "start": "node index.js"
+{
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    ...
+  }
 }
